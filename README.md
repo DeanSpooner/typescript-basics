@@ -1,81 +1,21 @@
 <h1 align="center">
-<img width="40" valign="bottom" src="https://ultimatecourses.com/static/icons/typescript.svg">
 TypeScript: Basics Course Seed
 </h1>
-<h4 align="center">Project seed for our comprehensive introduction to TypeScript course.</h4>
 
----
+## tsc
 
-<a href="https://ultimatecourses.com" target="_blank"><img src="https://ultimatecourses.com/static/banners/ultimate-typescript-leader.svg"></a>
+The `tsc` command runs the TypeScript compiler, converting .ts files into .js files with the appropriate TypeScript rules applied.
 
----
+## tsc --init
 
-> This repo serves as the seed project for Ultimate Angular's TypeScript Basics course as well as the final solution in stepped branches, come and [learn TypeScript](https://ultimatecourses.com/courses/typescript) with us!
+The `tsc --init` files creates a tsconfig.json file, where configurations for the TypeScript compiler can be made.
 
-[Setup and install](#setup-and-install) | [Tasks](#tasks) |
-[Resources](#resources)
+## outDir
 
-## Setup and install
+An `outDir` property can be added to the tsconfig.json file, and will be used by the compiler to know which directory to send the newly-generated JavaScript files to.
 
-Fork this repo from inside GitHub so you can commit directly to your account, or
-simply download the `.zip` bundle with the contents inside.
+An explicit `tsc --outDir yourDirName/Here` command will specify where to send the new JavaScript files on this one run.
 
-#### Dependency installation
+## tsc -w
 
-During the time building this project, you'll need development dependencies of
-which run on Node.js, follow the steps below for setting everything up (if you
-have some of these already, skip to the next step where appropriate):
-
-1. Download and install [Node.js here](https://nodejs.org/en/download/) for
-   Windows or for Mac.
-
-2. Install TypeScript globally via `npm i -g typescript`
-
-That's about it for tooling you'll need to run the project, let's move onto the
-project install.
-
-#### Project installation and server
-
-Now you've pulled down the repo and have everything setup, using the terminal
-you'll need to `cd` into the directory that you cloned the repo into and run
-some quick tasks:
-
-```
-cd <typescript-basics-seed>
-yarn install
-# OR
-npm install
-```
-
-This will then setup all the development and production dependencies we need.
-
-Now simply run this to boot up the server:
-
-```
-yarn start
-# OR
-npm start
-```
-
-Visit `localhost:3000` to start building.
-
-## Tasks
-
-A quick reminder of all tasks available:
-
-#### Development server
-
-```
-yarn start
-# OR
-npm start
-```
-
-## Resources
-
-There are several resources used inside this course, of which you can read
-further about to dive deeper or understand in more detail what they are:
-
-* [TypeScript Docs](https://www.typescriptlang.org)
-* [TypeScript Playground](https://www.typescriptlang.org/play)
-* [AST Explorer](https://astexplorer.net)
+This watches for any changes within .ts files, and applies them to their .js counterparts as you save your changes. This will also watch for new .ts files.
